@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FOODSMILE:) | Recommendations</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Web Development Assignment 2" >
+<meta name="keywords" content="HTML, CSS and JavaScript" >
+<meta name="author" content="Cheng Feng" >
+
+<link href="css/style.css" rel="stylesheet">
+<script src="js/script.js" defer></script>
+</head>
+
+<body style="background-image: url(images/background.webp); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <header class="site-header">
+        <a class="logo" href="index.html">FOODSMILE:)</a>
+        <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a class="active" aria-current="page" href="recommend.html">Recommendations</a>
+        <a href="register.html">Register</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="bill.html">Bill estimator</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-intro"><p>A LITTLE HELP DECIDING</p><h1>Find your dining match.</h1>
+        <p>Tell us what you need and the page will match your choices to our sample restaurants.</p></section>
+        <section class="form-panel">
+            <form id="recommend-form">
+                <div>
+                    <div><label for="dietary">Dietary preference</label><select id="dietary" name="dietary" required>
+                        <option value="">Choose a preference</option><option value="muslim">Muslim-friendly (pork-free)</option>
+                        <option value="none">No preference</option></select></div>
+                    <div><label for="budget">Budget per person</label><select id="budget" name="budget" required>
+                        <option value="">Choose a budget</option><option value="low">Under RM 25</option>
+                        <option value="medium">RM 25–40</option><option value="any">Any budget (up to RM 40)</option></select></div>
+                    <div class="full-width"><label for="purpose">Dining purpose</label><select id="purpose" name="purpose" required>
+                        <option value="">Choose a purpose</option><option value="family">Family</option>
+                        <option value="friends">Friends / study group</option><option value="casual">Casual meal</option></select></div>
+                </div>
+                <button class="button" type="submit">Show recommendations</button>
+                <p class="form-message" id="recommend-message" aria-live="polite"></p>
+            </form>
+        </section>
+        <section class="section"><div class="section-heading left-heading"><p>YOUR MATCHES</p><h2>Recommended for you</h2></div><div id="recommend-results" class="recommend-results" aria-live="polite"><p class="empty-state">Complete the form above to see restaurant recommendations.</p></div></section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; 2026 | Lee Cheng Feng | COS10005 Web Development</p><p>Assignment 2</p><a href="refer.html"><strong>(Click here to refer links)</strong></a></footer>
+   
+</body>
+
+</html>

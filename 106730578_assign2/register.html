@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FOODSMILE:) | Register</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Web Development Assignment 2" >
+<meta name="keywords" content="HTML, CSS and JavaScript" >
+<meta name="author" content="Cheng Feng" >
+
+<link href="css/style.css" rel="stylesheet">
+<script src="js/script.js" defer></script>
+</head>
+
+<body style="background-image: url(images/background.webp); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <header class="site-header">
+        <a class="logo" href="index.html">FOODSMILE:)</a>
+        <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="recommend.html">Recommendations</a>
+        <a class="active" aria-current="page" href="register.html">Register</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="bill.html">Bill estimator</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-intro"><p>JOIN FOODSMILE:)</p><h1>Create your account.</h1>
+        <p>(This demonstration form checks your entries in the browser. It does not create a database account.)</p></section>
+        <section class="form-panel">
+            <form id="register-form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" novalidate>
+                <div>
+                    <div><label for="username">Username *</label><input id="username" name="username" autocomplete="username" required>
+                        <small>At least 5 characters; letters, numbers and underscores only.</small><span class="error" id="username-error"></span></div>
+                    <div><label for="reg-email">Email address *</label><input id="reg-email" name="email" type="email" autocomplete="email" required>
+                        <span class="error" id="reg-email-error"></span></div>
+                    <div><label for="reg-phone">Phone number *</label><input id="reg-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required>
+                        <small>8–15 digits, numbers only.</small><span class="error" id="reg-phone-error"></span></div>
+                    <div><label for="country">Country / Region *</label><select id="country" name="country" required><option value="">Select country / region</option>
+                        <option>Malaysia</option><option>Other</option></select><span class="error" id="country-error"></span></div>
+                    <div><label for="password">Password *</label><input id="password" name="password" type="password" autocomplete="new-password" required>
+                        <small>10+ characters with uppercase, lowercase, number and special character.</small><span class="error" id="password-error"></span></div>
+                    <div><label for="confirm-password">Confirm password *</label><input id="confirm-password" name="confirm_password" type="password" autocomplete="new-password" required>
+                        <span class="error" id="confirm-password-error"></span></div>
+
+                    <fieldset><legend>Gender *</legend>
+                        <div class="choice-row">
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                            <label><input type="radio" name="gender" value="other"> Other</label>
+                            <label><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label></div>
+                        <span class="error" id="gender-error"></span></fieldset>
+
+                    <fieldset><legend>Dietary preferences *</legend>
+                        <div class="choice-row">
+                            <label><input type="checkbox" name="dietary_preferences" value="halal"> Halal</label>
+                            <label><input type="checkbox" name="dietary_preferences" value="vegan"> Vegan</label>
+                            <label><input type="checkbox" name="dietary_preferences" value="vegetarian"> Vegetarian</label>
+                            <label><input type="checkbox" name="dietary_preferences" value="none"> No preference</label></div>
+                        <span class="error" id="dietary-preferences-error"></span></fieldset>
+                </div>
+                <p class="form-message" id="register-message" aria-live="polite"></p>
+                <button class="button" type="submit">Create account</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; 2026 | Lee Cheng Feng | COS10005 Web Development</p><p>Assignment 2</p><a href="refer.html"><strong>(Click here to refer links)</strong></a></footer>
+</body>
+</html>

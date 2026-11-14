@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FOODSMILE:) | Restaurants</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Web Development Assignment 2" >
+<meta name="keywords" content="HTML, CSS and JavaScript" >
+<meta name="author" content="Cheng Feng" >
+
+<link href="css/style.css" rel="stylesheet">
+<script src="js/script.js" defer></script>
+</head>
+
+<body style="background-image: url(images/background.webp); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <header class="site-header">
+        <a class="logo" href="index.html">FOODSMILE:)</a>
+        <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" aria-current="page" href="restaurants.html">Restaurants</a>
+        <a href="recommend.html">Recommendations</a>
+        <a href="register.html">Register</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="bill.html">Bill estimator</a>
+        </nav>
+    </header>
+    
+    <main class="page-main">
+        <section class="page-intro"><p>THE RESTAURANT SELECTION</p><h1>Places worth for eating.</h1>
+            <p>Explore our collection of restaurants. Check out the prices, menus and deposits here. (some info are fictional such as reservation deposit)</p></section>
+            <section class="restaurant-grid" id="restaurant-list" aria-label="Restaurant listings">
+                
+                <article class="restaurant-card">
+                    <div class="restaurant-art"><img src="images/yip.webp" alt="yip" height="300" width="300"></div>
+                    <div class="restaurant-info"><div class="tag-row"><span class="tag">Asian</span><span class="tag"> food</span></div>
+                    <h2>Yip Noodle House</h2><p class="price">RM 20–40 <span>/ person</span></p>
+                    <p>
+                        Yip Noodle House is a popular, modern-cozy casual eatery specializing in customizable Yunnan-style rice noodles and flavorful, rich broths.
+                        Diners can pick their preferred noodles, such as chewy Yunnan rice noodles or Hong Kong thin noodles,
+                        and mix and match proteins and sides like pork slices, chicken, handmade fish paste and fried beancurd skin.
+                        It is a good choice for anyone who enjoys building their own bowl.
+                    </p>
+                    <h3>Signature dishes</h3><ul><li>Golden Fish Maw Soup — RM 20.90</li><li>Signature Creamy Fish Head Soup — RM 24.90</li></ul>
+                    <p class="deposit"><strong>Reservation deposit:</strong> RM 20 per booking</p><button class="button button-small reserve-button" type="button" data-restaurant="yip">Reserve this restaurant</button></div>
+                </article>
+                
+                <article class="restaurant-card">
+                    <div class="restaurant-art"><img src="images/grandmum.jpeg" alt="grandmum" height="300" width="300"></div>
+                    <div class="restaurant-info"><div class="tag-row"><span class="tag">Malaysia</span><span class="tag"> dish</span></div>
+                    <h2>Grandmum Kitchen</h2><p class="price">RM 15–30 <span>/ person</span></p>
+                    <p>
+                        Grandmum Kitchen is a modern, clean and air-conditioned local eatery that serves home-style Malaysian comfort food 
+                        in a cozy, family-friendly setting. The restaurant is pork-free and Muslim-friendly, drawing a steady mix of students,
+                        nearby office workers and local families. Its nasi lemak plates are simple, filling and reasonably priced, 
+                        which makes it an easy choice for an everyday meal.
+                    </p>
+                    <h3>Signature dishes</h3><ul><li>Nasi Lemak Ayam Goreng — RM 14.90</li><li>Nasi Lemak Sotong Goreng — RM 15.90</li></ul>
+                    <p class="deposit"><strong>Reservation deposit:</strong> RM 10 per booking</p><button class="button button-small reserve-button" type="button" data-restaurant="grandmum">Reserve this restaurant</button></div>
+                </article>
+
+                <article class="restaurant-card">
+                    <div class="restaurant-art"><img src="images/bangga.webp" alt="bangga" height="300" width="300"></div>
+                    <div class="restaurant-info"><div class="tag-row"><span class="tag">Korean</span><span class="tag"> dish</span></div>
+                    <h2>Bang Ga Bang Ga</h2><p class="price">RM 15–25 <span>/ person</span></p>
+                    <p>
+                        Bang Ga Bang Ga (BGBG) offers a casual, student-friendly Korean street-food and comfort dining experience.
+                        Dine-in guests enjoy refillable kimchi, pickled radish and soup.
+                        After meeting a small minimum spend at the in-house photobooth, 
+                        guests can also take complimentary photo strips to commemorate their visit, 
+                        which makes it a fun place to hang out with friends.
+                    </p>
+                    <h3>Signature dishes</h3><ul><li>Dak Gang Jeong Set — RM 16++</li><li>Bulgogi — RM 24++</li></ul>
+                    <p class="deposit"><strong>Reservation deposit:</strong> RM 10 per booking</p><button class="button button-small reserve-button" type="button" data-restaurant="bangga">Reserve this restaurant</button></div>
+                </article>
+
+                <article class="restaurant-card">
+                    <div class="restaurant-art"><img src="images/mentai.jpg" alt="mentai" height="300" width="300"></div>
+                    <div class="restaurant-info"><div class="tag-row"><span class="tag">Japanese</span><span class="tag"> dish</span></div>
+                    <h2>Sushi Mentai</h2><p class="price">RM 20–40 <span>/ person</span></p>
+                    <p>
+                        Sushi Mentai is a budget-friendly, fast-casual Japanese restaurant. It is part of the popular Sushi Mentai chain, 
+                        known for offering accessible Japanese cuisine in casual Malaysian neighborhood settings. 
+                        It serves as a go-to spot for diners seeking filling, inexpensive sushi and cooked Japanese meals 
+                        without formal restaurant pricing, with plates starting from just RM 1.80.
+                    </p>
+                    <h3>Signature dishes</h3><ul><li>Salmon Mentai — RM 2.80 per plate (red)</li><li>Tamago Mentai — RM 1.80 per plate (yellow)</li></ul>
+                    <p class="deposit"><strong>Reservation deposit:</strong> RM 10 per booking</p><button class="button button-small reserve-button" type="button" data-restaurant="mentai">Reserve this restaurant</button></div>
+                </article>
+
+                <article class="restaurant-card">
+                    <div class="restaurant-art"><img src="images/bkt.jpg" alt="bkt" height="300" width="300"></div>
+                    <div class="restaurant-info"><div class="tag-row"><span class="tag">Malaysia</span><span class="tag"> dish</span></div>
+                    <h2>Yip Weng Bah Kut Teh</h2><p class="price">RM 15-30 <span>/ person</span></p>
+                    <p>
+                        Yip Weng Bah Kut Teh is an owner-operated, casual Chinese restaurant that brings traditional recipes straight from Klang
+                        — the birthplace of bak kut teh — and has been run directly by its founder since opening in 2009.
+                        The founder personally oversees the kitchen to maintain strict quality control over the herbal broths and stir-fried dishes.
+                    </p>
+                    <h3>Signature dishes</h3><ul><li>Klang-Style Herbal Soup Bak Kut Teh — RM 25.80</li><li>Dry Bak Kut Teh — RM 25.80</li></ul>
+                    <p class="deposit"><strong>Reservation deposit:</strong> RM 15 per booking</p><button class="button button-small reserve-button" type="button" data-restaurant="bkt">Reserve this restaurant</button></div>
+                </article>
+
+                <article class="restaurant-card">
+                    <div class="restaurant-art"><img src="images/moeko.webp" alt="moeko" height="300" width="300"></div>
+                    <div class="restaurant-info"><div class="tag-row"><span class="tag">Japanese</span><span class="tag"> dish</span></div>
+                    <h2>Sushi Moeko</h2><p class="price">RM 20-40 <span>/ person</span></p>
+                    <p>
+                        Sushi Moeko is a popular Japanese restaurant known for serving fresh, 
+                        thick-cut sashimi and pocket-friendly Japanese rice bowls and sushi sets. 
+                        Diners consistently praise the friendly, accommodating staff, 
+                        and customers also highlight thoughtful touches such as handwritten notes and complimentary snacks included with orders. 
+                        The restaurant is pork-free and Muslim-friendly, so it is also a comfortable choice for mixed groups.
+                    </p>
+                    <h3>Signature dishes</h3><ul><li>Beef Yakiniku Don — RM 18.80++</li><li>Signature Salmon Set — RM 40++</li></ul>
+                    <p class="deposit"><strong>Reservation deposit:</strong> RM 15 per booking</p><button class="button button-small reserve-button" type="button" data-restaurant="moeko">Reserve this restaurant</button></div>
+                </article>
+        </section>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 | Lee Cheng Feng | COS10005 Web Development</p><p>Assignment 2</p><a href="refer.html"><strong>(Click here to refer links)</strong></a></footer>
+
+</body>
+
+</html>

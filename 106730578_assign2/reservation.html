@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FOODSMILE:) | Reservation</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Web Development Assignment 2" >
+<meta name="keywords" content="HTML, CSS and JavaScript" >
+<meta name="author" content="Cheng Feng" >
+
+<link href="css/style.css" rel="stylesheet">
+<script src="js/script.js" defer></script>
+</head>
+
+<body style="background-image: url(images/background.webp); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <header class="site-header">
+        <a class="logo" href="index.html">FOODSMILE:)</a>
+        <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="recommend.html">Recommendations</a>
+        <a href="register.html">Register</a>
+        <a class="active" aria-current="page" href="reservation.html">Reservation</a>
+        <a href="bill.html">Bill estimator</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-intro"><p>SAVE YOUR SEAT</p><h1>Make a reservation.</h1>
+            <p>Choose a restaurant and complete the details below. (This demo does not process real payments.)</p></section>
+        <section class="form-panel">
+            <form id="reservation-form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" novalidate>
+                <div>
+                    <div><label for="full-name">Full name *</label><input id="full-name" name="full_name" autocomplete="name" required>
+                        <span class="error" id="full-name-error"></span></div>
+                    <div><label for="res-email">Email address *</label><input id="res-email" name="email" type="email" autocomplete="email" required>
+                        <span class="error" id="res-email-error"></span></div>
+                    <div><label for="res-phone">Phone number *</label><input id="res-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required>
+                        <small>At least 10 digits, numbers only.</small><span class="error" id="res-phone-error"></span></div>
+                    <div><label for="restaurant">Restaurant *</label><select id="restaurant" name="restaurant" required>
+                        <option value="">Choose a restaurant</option><option value="yip">Yip Noodle House</option>
+                        <option value="grandmum">Grandmum Kitchen</option><option value="bangga">Bang Ga Bang Ga</option>
+                        <option value="mentai">Sushi Mentai</option><option value="bkt">Yip Weng Bah Kut Teh</option>
+                        <option value="moeko">Sushi Moeko</option></select><span class="error" id="restaurant-error"></span></div>
+                    <div><label for="reservation-date">Reservation date *</label><input id="reservation-date" name="reservation_date" type="date" required>
+                        <span class="error" id="reservation-date-error"></span></div>
+                    <div><label for="reservation-time">Reservation time *</label><input id="reservation-time" name="reservation_time" type="time" required>
+                        <span class="error" id="reservation-time-error"></span></div>
+                    <div><label for="people">Number of people *</label><input id="people" name="people" type="number" min="1" step="1" required>
+                        <span class="error" id="people-error"></span></div>
+                    <div><label for="deposit">Deposit amount</label><input id="deposit" name="deposit" readonly placeholder="Select a restaurant">
+                        <small>Deposit is set by the selected restaurant.</small></div>
+                    <div class="full-width"><label for="requests">Special requests (optional)</label>
+                        <textarea id="requests" name="requests" rows="3" placeholder="Any seating or dietary requests?"></textarea></div>
+                    <fieldset class="full-width"><legend>Deposit method *</legend>
+                        <div class="choice-row">
+                            <label><input type="radio" name="payment_method" value="voucher" checked> Voucher</label>
+                            <label><input type="radio" name="payment_method" value="online"> Online payment (demo)</label></div></fieldset>
+                    <div class="full-width" id="voucher-field"><label for="voucher-code">12-digit voucher code *</label>
+                        <input id="voucher-code" name="voucher_code" inputmode="numeric" maxlength="12" placeholder="Enter any 12 digits for demo">
+                        <span class="error" id="voucher-code-error"></span></div>
+                    <div class="full-width hidden" id="card-fields">
+                        <p>Use fake card details only. This page does not process payments.</p>
+                        <div><label for="card-type">Card type *</label><select id="card-type" name="card_type">
+                            <option value="">Choose card type</option><option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option><option value="amex">American Express</option>
+                        </select><span class="error" id="card-type-error"></span></div>
+                        <div><label for="card-number">Card number *</label>
+                            <input id="card-number" name="card_number" inputmode="numeric" autocomplete="off" placeholder="Digits only">
+                            <span class="error" id="card-number-error"></span></div>
+                    </div>
+                    <div class="full-width"><label for="billing-email">Billing email address *</label>
+                        <input id="billing-email" name="billing_email" type="email" required>
+                        <label><input type="checkbox" id="same-email"> Same as email address</label>
+                        <span class="error" id="billing-email-error"></span></div>
+                </div>
+                <p class="form-message" id="reservation-message" aria-live="polite"></p>
+                <button class="button" type="submit">Submit reservation</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>&copy; 2026 | Lee Cheng Feng | COS10005 Web Development</p><p>Assignment 2</p><a href="refer.html"><strong>(Click here to refer links)</strong></a></footer>
+</body>
+</html>

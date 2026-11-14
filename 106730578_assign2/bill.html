@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FOODSMILE:) | Bill Estimator</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Web Development Assignment 2" >
+<meta name="keywords" content="HTML, CSS and JavaScript" >
+<meta name="author" content="Cheng Feng" >
+
+<link href="css/style.css" rel="stylesheet">
+<script src="js/script.js" defer></script>
+</head>
+
+<body style="background-image: url(images/background.webp); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <header class="site-header">
+        <a class="logo" href="index.html">FOODSMILE:)</a>
+        <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="recommend.html">Recommendations</a>
+        <a href="register.html">Register</a>
+        <a href="reservation.html">Reservation</a>
+        <a class="active" aria-current="page" href="bill.html">Bill estimator</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-intro"><h1>Bill Estimator</h1>
+            <p>Estimate the food cost for your group and plan your meal budget. This is an estimate, not a final restaurant quotation.</p></section>
+        <section class="form-panel">
+            <form id="bill-form" novalidate>
+                <div>
+                    <div><label for="bill-restaurant">Choose a restaurant</label><select id="bill-restaurant" name="restaurant" required>
+                        <option value="">Select a restaurant</option>
+                        <option value="yip">Yip Noodle House</option>
+                        <option value="grandmum">Grandmum Kitchen</option>
+                        <option value="bangga">Bang Ga Bang Ga</option>
+                        <option value="mentai">Sushi Mentai</option>
+                        <option value="bkt">Yip Weng Bah Kut Teh</option>
+                        <option value="moeko">Sushi Moeko</option></select></div>
+                    <div><label for="bill-people">Number of people</label>
+                        <input id="bill-people" name="people" type="number" min="1" max="30" value="2" required>
+                        <small>Enter a whole number from 1 to 30.</small></div>
+                    <div class="full-width"><label for="bill-extra">Optional add-on per person</label>
+                        <select id="bill-extra" name="extra">
+                            <option value="0">No add-on (RM 0.00)</option>
+                            <option value="8">Starter (RM 8.00 per person)</option><option value="12">Dessert (RM 12.00 per person)</option>
+                            <option value="6">Drink (RM 6.00 per person)</option></select></div>
+                </div>
+                <button class="button" type="submit">Calculate estimate</button>
+                <button class="button button-outline" type="reset">Reset</button>
+                <p id="bill-message" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+            <div id="bill-result" aria-live="polite">
+                <h2>Your estimated bill</h2>
+                <p><span>Estimated food cost</span><strong id="bill-base">RM 0.00</strong></p>
+                <p><span>Optional add-ons</span><strong id="bill-extra-total">RM 0.00</strong></p>
+                <p><span>Estimated total</span><strong id="bill-total">RM 0.00</strong></p>
+                <p id="bill-explanation">Choose a restaurant and calculate to see an estimate.</p>
+            </div>
+        </section>
+        <p class="note">The calculation uses the midpoint of each restaurant's price range. 
+            Deposits, service charges, tax, and unselected items are excluded.</p>
+    </main>
+
+    <footer class="site-footer"><p>&copy; 2026 | Lee Cheng Feng | COS10005 Web Development</p><p>Assignment 2</p><a href="refer.html"><strong>(Click here to refer links)</strong></a></footer>
+</body>
+</html>

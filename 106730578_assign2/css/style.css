@@ -1,0 +1,142 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 2.2rem; }
+
+main { max-width: 1100px; margin: auto; padding: 35px 5%; }
+main > section { margin-bottom: 25px; }
+
+.bold { color: darkgreen; font-weight: bold; letter-spacing: 1px; }
+.page-intro, .section-heading { margin-bottom: 25px; }
+.page-intro { background-color: white; padding: 15px 20px; border-radius: 8px; }
+.section-heading { background: white; padding: 10px 20px; border-radius: 8px; }
+.section { padding: 35px 5%; }
+.note { background: white; padding: 10px; border-radius: 8px; }
+
+.site-header {
+  background: whitesmoke;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.logo { color: darkgreen; font-size: 25px; font-weight: bold; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 15px; }
+nav a { color: blue; text-decoration: none; }
+nav a:hover, nav .active { color: darkgreen; text-decoration: underline; }
+
+.home {
+  padding: 55px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: lightgrey;
+}
+.home-content { max-width: 600px; }
+.below {
+  background: darkgreen;
+  color: white;
+  padding: 25px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.below .bold { color: white; }
+
+.button {
+  display: inline-block;
+  padding: 10px 17px;
+  margin: 8px 5px 8px 0;
+  border: 0;
+  border-radius: 5px;
+  background: darkgreen;
+  color: white;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover { background: #2e7d32; }
+.button-outline { background: gold; color: #222; }
+.button-outline:hover { background: khaki; color: #222; }
+.button-light { background: white; color: darkgreen; }
+.button-light:hover { background: whitesmoke; color: darkgreen; }
+.button-small { padding: 7px 12px; }
+
+.feature-grid, .restaurant-grid, .recommend-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.feature-card, .restaurant-card, .form-panel, .content-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px black;
+}
+.restaurant-art img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag, .price { font-weight: bold; color: darkgreen; }
+.price span { color: dimgrey; font-weight: normal; }
+.deposit { background: whitesmoke; padding: 8px; }
+
+.recommend-results { background: white; padding: 20px; border-radius: 8px; }
+.match-card { border: 1px solid lightgrey; border-radius: 8px; padding: 15px; }
+.empty-state, .partial-note { color: dimgrey; }
+.partial-note { font-style: italic; }
+
+.form-panel form > div:first-child { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+.full-width { grid-column: 1 / -1; }
+label, legend { font-weight: bold; }
+label { display: block; margin-bottom: 5px; }
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid dimgrey;
+  border-radius: 4px;
+  font: inherit;
+}
+input[type="radio"], input[type="checkbox"] { width: auto; margin-bottom: 0; }
+fieldset { border: 1px solid lightgrey; border-radius: 5px; margin-bottom: 15px; }
+.choice-row { display: flex; flex-wrap: wrap; gap: 15px; }
+.choice-row label, fieldset label { font-weight: normal; }
+small { display: block; color: dimgrey; }
+.error { display: block; color: #b00020; font-size: 14px; }
+.form-message { font-weight: bold; }
+.form-message.success { color: darkgreen; }
+.form-message.failure { color: #b00020; }
+.hidden { display: none !important; }
+
+#bill-result { background: whitesmoke; padding: 20px; margin-top: 20px; border-radius: 8px; }
+#bill-result h2 { margin-top: 0; }
+#bill-result strong { margin-left: 15px; }
+
+.site-footer { padding: 20px; text-align: center; color: white; background-color: black; }
+.site-footer strong { color: aqua; }
+
+
+/* Tablet (768px to 1023px): two columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .feature-grid, .restaurant-grid, .recommend-results { grid-template-columns: repeat(2, 1fr); }
+  h1 { font-size: 2rem; }
+}
+
+/* Mobile (767px and narrower): one column */
+@media (max-width: 767px) {
+  .home, .below { flex-direction: column; align-items: flex-start; }
+  .feature-grid, .restaurant-grid, .recommend-results { grid-template-columns: 1fr; }
+  .form-panel form > div:first-child { grid-template-columns: 1fr; }
+  .section { padding: 25px 0; }
+  h1 { font-size: 1.8rem; }
+}
