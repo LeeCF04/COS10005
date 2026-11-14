@@ -30,7 +30,7 @@ All pages share the same header, navigation bar (the current page is highlighted
 ---------------------------------------------------------------
 2. GITHUB REPOSITORY
 ---------------------------------------------------------------
-[Paste your GitHub repository link here. Make sure the repository is accessible to the marker.]
+https://github.com/LeeCF04/COS10005.git
 
 ---------------------------------------------------------------
 3. HOW THE JAVASCRIPT WORKS (PLAIN ENGLISH)
